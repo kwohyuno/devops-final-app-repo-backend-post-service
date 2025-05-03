@@ -1,0 +1,27 @@
+services:
+  frontend:
+    build:
+      context: ./src/main/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - REACT_APP_API_URL=${API_URL}
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .
+      dockerfile: src/main/java/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://${RDS_ENDPOINT}:3306/jake_dbschema?allowPublicKeyRetrieval=true&useSSL=false
+      - SPRING_DATASOURCE_USERNAME=${DB_USERNAME}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.MySQL8Dialect
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+    restart: always
+
+

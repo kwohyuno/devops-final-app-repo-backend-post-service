@@ -1,0 +1,18 @@
+# Java / Spring
+target/
+*.class
+*.log
+
+# IntelliJ
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Node.js (React 프론트)
+node_modules/
+build/
+
+# VSCode
+.vscode/
