@@ -18,7 +18,7 @@ import org.springframework.http.MediaType;
 @Service
 public class TranslateService {
 
-    @Value("${openai.api.key}")  // application.properties에서 OpenAI API 키를 불러옴
+//    @Value("${openai.api.key}")  // application.properties에서 OpenAI API 키를 불러옴
     private String openAiApiKey;
 
     private RestTemplate restTemplate;
