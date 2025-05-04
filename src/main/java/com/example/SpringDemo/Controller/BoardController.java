@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/board")
+@RequestMapping("/board")
 @CrossOrigin
 public class BoardController {
     private final BoardService boardService;

@@ -11,7 +11,7 @@ import java.util.List;
 @CrossOrigin
 public class HelloController {
 
-    @GetMapping("/api/hello")
+    @GetMapping("/hello")
     public List<String> Hello(){
         return Arrays.asList("serverserver", "viewview");
     }

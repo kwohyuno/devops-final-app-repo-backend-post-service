@@ -9,7 +9,7 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api/health")
+@RequestMapping("/health")
 public class HealthController {
 
     @GetMapping

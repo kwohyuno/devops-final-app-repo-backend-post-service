@@ -16,7 +16,7 @@ public class LoginController {
         this.loginService = loginService;
     }
 
-    @PostMapping("/api/login")
+    @PostMapping("/login")
     public Member login(@RequestBody Member member) {
         return loginService.login(member);
     }
